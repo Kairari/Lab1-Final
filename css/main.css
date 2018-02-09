@@ -57,8 +57,16 @@ header {
   font-family: 'Palanquin', sans-serif;
   text-transform: uppercase;
   padding: 1em 3em;
-  text-decoration: none;
+}
+
+.open a {
   color: #000;
+  text-decoration: none;
+  padding: 0 5px;
+}
+
+.open a:hover {
+  color: #999;
 }
 
 .nav-links li {
@@ -103,6 +111,10 @@ header {
   bottom: 0;
   position: absolute;
   text-transform: uppercase;
+}
+
+.more a:hover {
+  color: #999;
 }
 
 .info, .more {
@@ -152,6 +164,10 @@ header {
   font-size: 1em;
 }
 
+#contact button:hover {
+  background: #eee;
+}
+
 #gallery-header {
   grid-area: headers;
   padding: 0 5em;
@@ -164,7 +180,6 @@ header {
 .images {
   display: grid;
   grid-template-columns: 3fr 3fr 3fr;
-  with:100%;
   grid-template-areas:
     "a b c"
     "d e f";
@@ -246,4 +261,65 @@ footer {
   right: 3%;
   position: absolute;
   bottom: 20%;
+}
+
+
+@media(max-width: 768px) {
+  #home {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    max-height: 100vh;
+    grid-template-areas:
+      "headers"
+      "pic"
+      "link"
+  }
+
+  .info {
+    padding: 1em 0 0 3em;
+  }
+
+  .info, .more {
+    height: 100%;
+    position: initial;
+  }
+
+  .more {
+    text-align: right;
+  }
+
+  .more a {
+    position: initial;
+  }
+
+  #contact {
+    padding: 0px 20%;
+  }
+
+  .images a {
+    display: none;
+  }
+
+  .images {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: 100%;
+    grid-template-areas: "a b" "c d" "e f";
+    text-align: center;
+    font-family: 'Palanquin', sans-serif;
+    text-transform: uppercase;
+  }
+
+  .images img {
+    width: 90%;
+  }
+
+  .footer-image img {
+    width: 50%;
+    right: 3%;
+    position: absolute;
+    bottom: 40%;
+  }
+
 }
