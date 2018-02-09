@@ -1,0 +1,30 @@
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.logo {
+  height: 35px;
+  width: 135px;
+}
+
+.hamburger-line {
+  width: 35px;
+  height: 5px;
+  background-color: black;
+  margin: 6px 0;
+  cursor: pointer;
+}
+
+.nav-links {
+  display: none;
+}
